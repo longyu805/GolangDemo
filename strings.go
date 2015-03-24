@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-	ToLower()
-	ToUpper()
-	ToUpperSpecial()
+	//ToLower()
+	//ToUpper()
+	//ToUpperSpecial()
+	CrossLineString()
 }
 
 //大写转小写
@@ -26,4 +27,18 @@ func ToUpper() {
 func ToUpperSpecial() {
 	var SC unicode.SpecialCase
 	fmt.Println(strings.ToUpperSpecial(SC, "Gopher"))
+}
+
+//字符串跨行连接，“+”必须在上一个字符串结尾
+func CrossLineString() {
+	s := "Hello" +
+		"World!"
+	fmt.Println(s)
+
+	/*
+		s2 := "Hello"
+		+"World!"
+		fmt.Println(s2)
+			invalid operation: + untyped string
+	*/
 }
